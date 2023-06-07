@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'NanumGothic'; /*font 이름*/
+    font-style: 'normal'; /* font 스타일 정의 (기울임, 일반) */
+    src: url('../font/NanumGothic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumGothic'; /*font 이름*/
+    font-style: 'bold'; /* font 스타일 정의 (기울임, 일반) */
+    src: url('../font/NanumGothicExtraBold.ttf') format('truetype');
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BookBook</title>
+    <style>
+        @import url("../static/css/fontstyle.css");
+
+        .layout {
+            width: 1200px; height: 800px;
+            background-color: bisque;
+            border-style: solid; border-width: 3px; border-color:lightsalmon; border-radius: 50px / 50px;
+          }
+          
+        .header { width: 800px; height: 70px; margin: 0 auto !important;
+            border-style: solid; border-width: 2px; border-color:lightsalmon;
+            background-color: white;
+        }
+        form {
+            background-color: white;
+            border-style: none; 
+            top:50%
+        }
+        form > img, span, button {
+            display: inline-block; text-align: center; 
+        }
+
+        form > * {
+            font-family: 'NanumGothic';
+        }
+
+        input {
+            border-style: none; background-color: lightgray;
+        }
+        button {
+            border-style:none; width: 35px; height: 35px;
+        }
+        .icon { width: 35px; height: 35px; }
+        
+        .main { width: 1150px; height: 700px; margin: auto; }
+        #displayBox { width: 100%; height: 100%;}
+    </style>
+</head>
+<body>
+    <section class="layout">
+        <div class="header">
+            <form action="{{ url_for('search') }}" target="displayBox" method="GET">
+                <img class="icon" src="../static/img/charicon.png">
+                <span id="inputField">
+                    <span>작가: <input type="text" name="author" class="search" required></span>
+                    <span>제목: <input type="text" name="title" class="search" required></span>
+                </span>
+                <input type="submit" value="검색"></form>
+            </form>
+        </div>
+            <hr>
+        <div class="main">
+            <iframe id="displayBox" name="displayBox" src="{{ url_for('search_default') }}" frameborder="0">
+            </iframe>
+        </div>
+    </section>
+</body>
+</html>

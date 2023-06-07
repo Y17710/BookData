@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BookBook-Search Results</title>
+    <style>
+        @import url("../static/css/fontstyle.css");
+
+        .layout {
+            width: 90%; height: 90%;
+            background-color: white;
+            border-style: solid; border-width: 3px; border-color:lightsalmon; border-radius: 50px / 50px;
+          }
+          table {
+            display: relative; top:50%; left:50%; margin: 0 auto; width: 80%; height: 80%;
+            table-layout:fixed; background-color: white;
+            border-style: solid; border-width: 2px; border-color: lightgray;
+          }
+          tr {
+            border-style: solid; border-width: 1px; border-color: lightgray;
+          }
+    </style>
+</head>
+<body>
+    <section class="layout">
+        <table>
+            <tbody>
+                <tr>
+                    <td width="50%">
+                        <img src="{{ img }}" width="150" height="225">
+                    </td>
+                    <td width="50%" style="border-style: solid; border-width: 1px; border-color: lightgray;">
+                        <h3>" {{title}} "</h3>
+                        <h5>{{author}} 지음</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1">
+                        <div>
+                            <h3>독자의 리뷰</h3>
+                            <img name="wc_reviews" src="{{ fname }}" width="600" height="600">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </section>
+</body>
+</html>
